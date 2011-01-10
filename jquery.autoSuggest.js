@@ -4,7 +4,7 @@
  * www.drewwilson.com
  * code.drewwilson.com/entry/autosuggest-jquery-plugin
  *
- * Version 1.4   -   Updated: Mar. 23, 2010
+ * Version 1.4 fork   -   Updated: January 9, 2011
  *
  * This Plug-In will auto-complete or auto-suggest completed search queries
  * for you as you type. You can add multiple selections and remove them on
@@ -13,6 +13,8 @@
  *
  * Inspied by the Autocomplete plugin by: Jšrn Zaefferer
  * and the Facelist plugin by: Ian Tearle (iantearle.com)
+ *
+ * Contributor: Alan Hogan (http://alanhogan.com)
  *
  * This AutoSuggest jQuery plug-in is dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
