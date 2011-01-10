@@ -75,7 +75,7 @@
 				}
 				opts.start.call(this);
 				var input = $(this);
-				input.attr("autocomplete","off").addClass("as-input").attr("id",x_id).val(opts.startText);
+				input.attr("autocomplete","off").addClass("as-input").attr("id",x_id).val(opts.startText).addClass('as-prompt');
 				var input_focus = false;
 				
 				// Setup basic elements and render them to the DOM
@@ -112,7 +112,7 @@
 					}
 				}
 				if(prefill_value != ""){
-					input.val("");
+					input.val("").removeClass('as-prompt');
 					var lastChar = prefill_value.substring(prefill_value.length-1);
 					if(lastChar != ","){ prefill_value = prefill_value+","; }
 					values_input.val(","+prefill_value);
@@ -136,7 +136,7 @@
 				// Handle input field events
 				input.focus(function(){			
 					if($(this).val() == opts.startText && values_input.val() == ""){
-						$(this).val("");
+						$(this).val("").removeClass('as-prompt');
 					} else if(input_focus){
 						$("li.as-selection-item", selections_holder).removeClass("blur");
 						if($(this).val() != ""){
@@ -150,7 +150,7 @@
 				  selections_holder.children().removeClass("selected");
 				}).blur(function(){
 					if($(this).val() == "" && values_input.val() == "" && prefill_value == ""){
-						$(this).val(opts.startText);
+						$(this).val(opts.startText).addClass('as-prompt');
 					} else if(input_focus){
 						$("li.as-selection-item", selections_holder).addClass("blur").removeClass("selected");
 						results_holder.hide();
