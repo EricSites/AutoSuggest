@@ -361,7 +361,7 @@
 							input.focus();
 							return false;
 						});
-					org_li.before(item.html(data[opts.selectedItemProp]).prepend(close));
+					org_li.before(item.text(data[opts.selectedItemProp]).prepend(close));
 					opts.selectionAdded.call(this, org_li.prev());	
 				}
 				
