@@ -40,6 +40,9 @@ ul.as-selections li.as-selection-item {
 	box-shadow: 0 1px 1px #e4edf2;
 	-webkit-box-shadow: 0 1px 1px #e4edf2;
 	-moz-box-shadow: 0 1px 1px #e4edf2;
+	cursor: default;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 ul.as-selections li.as-selection-item:last-child {
