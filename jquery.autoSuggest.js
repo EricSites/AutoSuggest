@@ -205,6 +205,18 @@
 							if(active.length > 0){
 								active.click();
 								results_holder.hide();
+							} else {
+							  var i_input = input.val().replace(/(,)/g, "");
+  							if(i_input != "" && values_input.val().search(","+i_input+",") < 0 && i_input.length >= opts.minChars){	
+			  				  tab_press = true; // Maybe? Drew?
+  								e.preventDefault();
+  								var n_data = {};
+  								n_data[opts.selectedItemProp] = i_input;
+  								n_data[opts.selectedValuesProp] = i_input;																				
+  								var lis = $("li", selections_holder).length;
+  								add_selected_item(n_data, "00"+(lis+1));
+  								input.val("");
+  							}
 							}
 							if(opts.neverSubmit || active.length > 0){
 								e.preventDefault();
