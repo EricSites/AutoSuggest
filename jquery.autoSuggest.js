@@ -116,7 +116,11 @@
 					$("li.as-selection-item", selections_holder).addClass("blur").removeClass("selected");
 				}
 				input.after(values_input);
-				selections_holder.click(function(){
+				selections_holder.click(function(e){
+          if($(e.target).is(selections_holder.selector)) { 
+            // Clicking the box itself? Clear selected items
+            selections_holder.children().removeClass("selected");
+          }
 					input_focus = true;
 					input.focus();
 				}).mousedown(function(){ input_focus = false; }).after(results_holder);	
@@ -139,6 +143,8 @@
 					}
 					input_focus = true;
 					return true;
+				}).click(function(){
+				  selections_holder.children().removeClass("selected");
 				}).blur(function(){
 					if($(this).val() == "" && values_input.val() == "" && prefill_value == ""){
 						$(this).val(opts.startText);
