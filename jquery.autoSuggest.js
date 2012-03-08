@@ -344,6 +344,12 @@
 					}
 					results_ul.css("width", selections_holder.outerWidth());
 					results_holder.show();
+               // if opts.autoSelectFirstMatch then always want top item in the list to be 
+               // highlighted so user can just hit enter without having to first hit down 
+               // arrow or mouse to select from the drop-down list.
+               if(opts.autoSelectFirstMatch){
+                  selectFirstResult();          
+               }
 					opts.resultsComplete.call(this);
 				}
 				
@@ -364,6 +370,15 @@
 					org_li.before(item.text(data[opts.selectedItemProp]).prepend(close));
 					opts.selectionAdded.call(this, org_li.prev());	
 				}
+
+            function selectFirstResult(){
+               if($(":visible",results_holder).length > 0){
+                  var lis = $("li", results_holder);					
+                  var start = lis.eq(0);
+                  lis.removeClass("active");
+                  start.addClass("active");                     
+               }
+            }
 				
 				function moveSelection(direction){
 					if($(":visible",results_holder).length > 0){
