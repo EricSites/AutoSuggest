@@ -15,8 +15,20 @@ as multiple AutoSuggest fields on the same page.
 Inspied by the Autocomplete plugin by: Jšrn Zaefferer
 and the Facelist plugin by: Ian Tearle (iantearle.com)
 
+General usage and description of the options in Drew's version can be
+found in his blog post (the second URL at the top of this file).
+
+Additional options added since that blog post:
+
+autoSelectFirstMatch - boolean - defaults to false
+   auto-selects the first match without clicking or arrowing to it. More
+   like default facebook behavior where you can type a few letters and 
+   hit enter or tab to select the first match.
+
+
 Contributors:
 Alan Hogan (http://alanhogan.com)
+J.D. Mullin (http://www.jdwashere.com)
 
 This AutoSuggest jQuery plug-in is dual licensed under the MIT and GPL licenses:
 http://www.opensource.org/licenses/mit-license.php
