@@ -25,6 +25,10 @@ autoSelectFirstMatch - boolean - defaults to false
    like default facebook behavior where you can type a few letters and 
    hit enter or tab to select the first match.
 
+Modified the name of the post data parameter. Used to be as-values-X which
+had nothing to do with the data posted. Modified to use the target element's
+name plus the suffix "Values".
+
 
 Contributors:
 Alan Hogan (http://alanhogan.com)
